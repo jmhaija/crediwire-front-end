@@ -1,0 +1,26 @@
+define({
+    apiUrl : 'http://localhost:8989',
+    corsCredentials : 'include',
+    defaultLanguage : 'da-DK',
+    dictionaryPath : '/assets/dict',
+    environment : 'test',
+    erpList : 'testing',
+    exposeErrors : true,
+    facebook : {
+        appId : '',
+        pixelId : ''
+    },
+    gaTrackId : '',
+    google : {
+        clientId : ''
+    },
+    intercom : {
+        appId : ''
+    },
+    partnerList : 'testing',
+    ravenDebug : true,
+    ravenDSN : '',
+    ravenWhitelist : [/frontend-test\.crediwire\.com/, /test\.crediwire.com/],
+    release : 'docker',
+    xenaApiUrl : ''
+});

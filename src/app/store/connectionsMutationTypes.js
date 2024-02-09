@@ -1,0 +1,7 @@
+define([], function() {
+    return {
+        SET_INVITATIONS: 'SET_INVITATIONS',
+        SET_LAST_CONNECTION_TYPE: 'SET_LAST_CONNECTION_TYPE',
+        SET_LAST_CONNECTION_VIEW: 'SET_LAST_CONNECTION_VIEW'
+    };
+});

@@ -1,0 +1,13 @@
+#Do not allow directory listing
+Options -Indexes
+
+#Enable rewrite engine routing
+RewriteEngine on
+
+#Requests to resources go through...
+RewriteRule ^(app|assets|lib|favicon.ico)($|/) - [L]
+RewriteRule appDev.js - [L]
+RewriteRule appProd.js - [L]
+
+#...all requests go to index.html
+RewriteRule . index.html [QSA,L]

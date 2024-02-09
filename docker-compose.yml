@@ -1,0 +1,15 @@
+version: '2'
+services:
+  application:
+    image: tianon/true
+    volumes:
+      - .:/var/www/application
+  nginx:
+    image: nginx:1.11
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
+    volumes_from:
+      - application
+    volumes:
+        - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf

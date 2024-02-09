@@ -1,0 +1,7 @@
+define([], function() {
+    return {
+        SET_UPDATE_BUDGET: 'SET_UPDATE_BUDGET',
+        SET_IMPORT_BUDGET: 'SET_IMPORT_BUDGET',
+        SET_BUDGET_PREVIOUS_YEAR_DATE: 'SET_BUDGET_PREVIOUS_YEAR_DATE'
+    };
+});

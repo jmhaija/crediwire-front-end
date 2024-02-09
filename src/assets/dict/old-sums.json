@@ -1,0 +1,15 @@
+{
+  "sum1" : "Gross income",
+  "sum2" : "EBITDA",
+  "sum3" : "Operational result",
+  "sum4" : "EBIT",
+  "sum5" : "Underlying result before taxes",
+  "sum6" : "Income before taxes",
+  "sum7" : "Net income",
+  "sum8" : "Total Assets",
+  "sum9" : "Total equity",
+  "sum10" : "Total liabilities",
+  "sum11" : "Total equity and liabilities",
+  "sum12" : "Zero control",
+  "sum13" : "Period result"
+}

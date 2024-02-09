@@ -1,0 +1,8 @@
+define([], function() {
+   return  {
+       CASHBOOK_DISABLED: 'CASHBOOK_DISABLED',
+       CASHBOOK: 'CASHBOOK',
+       ONLY_CASHBOOK: 'ONLY_CASHBOOK',
+       ONLY_CASHBOOK_DISABLED: 'ONLY_CASHBOOK_DISABLED'
+   };
+});

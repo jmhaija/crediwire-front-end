@@ -1,0 +1,6 @@
+define([], function() {
+    return {
+        SET_KEEP_ALIVE_START_TIME: 'SET_KEEP_ALIVE_START_TIME',
+        UPDATE_KEEP_ALIVE_COUNTDOWN: 'UPDATE_KEEP_ALIVE_COUNTDOWN'
+    };
+});

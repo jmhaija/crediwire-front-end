@@ -1,0 +1,14 @@
+#!/bin/bash
+
+read -r -p "This will deploy to staging. Are you sure you want to do that right now? [y/N] " response
+response=${response,,}    # tolower
+if [[ "$response" =~ ^(yes|y)$ ]]
+then
+    aws s3 sync ./public s3://website-frontend-staging/ --exclude '.keep' --exclude 'index.html' --delete --region eu-central-1
+    aws s3 cp ./public/index.html s3://website-frontend-staging/index.html --region eu-central-1
+    environment="Staging"
+    currentuser=$(whoami)
+    branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
+    message="Frontend was deployed to the *$environment* environment from branch *$branch* by *$currentuser*."
+    curl -X POST -H 'Content-type: application/json' --data "{\"text\":\"$message\"}" https://hooks.slack.com/services/
+fi

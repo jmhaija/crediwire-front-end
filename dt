@@ -1,0 +1,9 @@
+#!/bin/bash
+
+aws s3 sync ./public s3://website-frontend-test/ --exclude '.keep' --exclude 'index.html' --delete --region eu-central-1
+aws s3 cp ./public/index.html s3://website-frontend-test/index.html --region eu-central-1
+environment="Test"
+currentuser=$(whoami)
+branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
+message="Frontend was deployed to the *$environment* environment from branch *$branch* by *$currentuser*."
+curl -X POST -H 'Content-type: application/json' --data "{\"text\":\"$message\"}" https://hooks.slack.com/services/
